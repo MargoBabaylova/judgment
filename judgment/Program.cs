@@ -16,7 +16,8 @@ namespace judgment
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoadData());
+            // Форма при инициализации проекта
+            Application.Run(new Judgment());
         }
     }
 }

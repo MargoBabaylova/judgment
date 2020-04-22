@@ -29,16 +29,15 @@
         private void InitializeComponent()
         {
             this.editJudgesBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.Form1Btn = new System.Windows.Forms.Button();
+            this.LoadDataBtn = new System.Windows.Forms.Button();
+            this.Form2Btn = new System.Windows.Forms.Button();
+            this.Form6Btn = new System.Windows.Forms.Button();
+            this.Form3Btn = new System.Windows.Forms.Button();
+            this.Form4Btn = new System.Windows.Forms.Button();
+            this.Form5Btn = new System.Windows.Forms.Button();
+            this.TableGenBtn = new System.Windows.Forms.Button();
+            this.Form7Btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // editJudgesBtn
@@ -52,128 +51,126 @@
             this.editJudgesBtn.UseVisualStyleBackColor = true;
             this.editJudgesBtn.Click += new System.EventHandler(this.editJudgesBtn_Click);
             // 
-            // button1
+            // Form1Btn
             // 
-            this.button1.BackColor = System.Drawing.Color.Yellow;
-            this.button1.Location = new System.Drawing.Point(74, 108);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(353, 48);
-            this.button1.TabIndex = 94;
-            this.button1.Text = "1. Нагрузка Поступило";
-            this.button1.UseVisualStyleBackColor = false;
+            this.Form1Btn.BackColor = System.Drawing.Color.Yellow;
+            this.Form1Btn.Location = new System.Drawing.Point(74, 108);
+            this.Form1Btn.Margin = new System.Windows.Forms.Padding(4);
+            this.Form1Btn.Name = "Form1Btn";
+            this.Form1Btn.Size = new System.Drawing.Size(353, 48);
+            this.Form1Btn.TabIndex = 94;
+            this.Form1Btn.Text = "1. Нагрузка Поступило";
+            this.Form1Btn.UseVisualStyleBackColor = false;
+            this.Form1Btn.Click += new System.EventHandler(this.Form1Btn_Click);
             // 
-            // button2
+            // LoadDataBtn
             // 
-            this.button2.Location = new System.Drawing.Point(74, 39);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(147, 48);
-            this.button2.TabIndex = 95;
-            this.button2.Text = "Загрузка данных";
-            this.button2.UseVisualStyleBackColor = true;
+            this.LoadDataBtn.Location = new System.Drawing.Point(74, 39);
+            this.LoadDataBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.LoadDataBtn.Name = "LoadDataBtn";
+            this.LoadDataBtn.Size = new System.Drawing.Size(147, 48);
+            this.LoadDataBtn.TabIndex = 95;
+            this.LoadDataBtn.Text = "Загрузка данных";
+            this.LoadDataBtn.UseVisualStyleBackColor = true;
+            this.LoadDataBtn.Click += new System.EventHandler(this.LoadDataBtn_Click);
             // 
-            // button3
+            // Form2Btn
             // 
-            this.button3.Location = new System.Drawing.Point(190, 660);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(147, 48);
-            this.button3.TabIndex = 96;
-            this.button3.Text = "Выход";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Form2Btn.BackColor = System.Drawing.Color.Lime;
+            this.Form2Btn.Location = new System.Drawing.Point(74, 177);
+            this.Form2Btn.Margin = new System.Windows.Forms.Padding(4);
+            this.Form2Btn.Name = "Form2Btn";
+            this.Form2Btn.Size = new System.Drawing.Size(353, 48);
+            this.Form2Btn.TabIndex = 97;
+            this.Form2Btn.Text = "2. Нагрузка Рассмотрено дел";
+            this.Form2Btn.UseVisualStyleBackColor = false;
+            this.Form2Btn.Click += new System.EventHandler(this.Form2Btn_Click);
             // 
-            // button4
+            // Form6Btn
             // 
-            this.button4.BackColor = System.Drawing.Color.Lime;
-            this.button4.Location = new System.Drawing.Point(74, 177);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(353, 48);
-            this.button4.TabIndex = 97;
-            this.button4.Text = "2. Нагрузка Рассмотрено дел";
-            this.button4.UseVisualStyleBackColor = false;
+            this.Form6Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.Form6Btn.Location = new System.Drawing.Point(74, 453);
+            this.Form6Btn.Margin = new System.Windows.Forms.Padding(4);
+            this.Form6Btn.Name = "Form6Btn";
+            this.Form6Btn.Size = new System.Drawing.Size(353, 48);
+            this.Form6Btn.TabIndex = 101;
+            this.Form6Btn.Text = "6. Приостановлено и оставлено без движения";
+            this.Form6Btn.UseVisualStyleBackColor = false;
+            this.Form6Btn.Click += new System.EventHandler(this.Form6Btn_Click);
             // 
-            // button5
+            // Form3Btn
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button5.Location = new System.Drawing.Point(74, 453);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(353, 48);
-            this.button5.TabIndex = 101;
-            this.button5.Text = "6. Приостановлено и оставлено без движения";
-            this.button5.UseVisualStyleBackColor = false;
+            this.Form3Btn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Form3Btn.Location = new System.Drawing.Point(74, 246);
+            this.Form3Btn.Margin = new System.Windows.Forms.Padding(4);
+            this.Form3Btn.Name = "Form3Btn";
+            this.Form3Btn.Size = new System.Drawing.Size(353, 48);
+            this.Form3Btn.TabIndex = 100;
+            this.Form3Btn.Text = "3. Нагрузка Рассмотрено заявлений";
+            this.Form3Btn.UseVisualStyleBackColor = false;
+            this.Form3Btn.Click += new System.EventHandler(this.Form3Btn_Click);
             // 
-            // button7
+            // Form4Btn
             // 
-            this.button7.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button7.Location = new System.Drawing.Point(74, 246);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(353, 48);
-            this.button7.TabIndex = 100;
-            this.button7.Text = "3. Нагрузка Рассмотрено заявлений";
-            this.button7.UseVisualStyleBackColor = false;
+            this.Form4Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Form4Btn.Location = new System.Drawing.Point(74, 315);
+            this.Form4Btn.Margin = new System.Windows.Forms.Padding(4);
+            this.Form4Btn.Name = "Form4Btn";
+            this.Form4Btn.Size = new System.Drawing.Size(353, 48);
+            this.Form4Btn.TabIndex = 99;
+            this.Form4Btn.Text = "4. Нагрузка Рассмотрено заявлений банкротство";
+            this.Form4Btn.UseVisualStyleBackColor = false;
+            this.Form4Btn.Click += new System.EventHandler(this.Form4Btn_Click);
             // 
-            // button8
+            // Form5Btn
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button8.Location = new System.Drawing.Point(74, 315);
-            this.button8.Margin = new System.Windows.Forms.Padding(4);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(353, 48);
-            this.button8.TabIndex = 99;
-            this.button8.Text = "4. Нагрузка Рассмотрено заявлений банкротство";
-            this.button8.UseVisualStyleBackColor = false;
+            this.Form5Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.Form5Btn.Location = new System.Drawing.Point(74, 384);
+            this.Form5Btn.Margin = new System.Windows.Forms.Padding(4);
+            this.Form5Btn.Name = "Form5Btn";
+            this.Form5Btn.Size = new System.Drawing.Size(353, 48);
+            this.Form5Btn.TabIndex = 98;
+            this.Form5Btn.Text = "5. Нарушение сроков";
+            this.Form5Btn.UseVisualStyleBackColor = false;
+            this.Form5Btn.Click += new System.EventHandler(this.Form5Btn_Click);
             // 
-            // button9
+            // TableGenBtn
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button9.Location = new System.Drawing.Point(74, 384);
-            this.button9.Margin = new System.Windows.Forms.Padding(4);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(353, 48);
-            this.button9.TabIndex = 98;
-            this.button9.Text = "5. Нарушение сроков";
-            this.button9.UseVisualStyleBackColor = false;
+            this.TableGenBtn.Location = new System.Drawing.Point(190, 591);
+            this.TableGenBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.TableGenBtn.Name = "TableGenBtn";
+            this.TableGenBtn.Size = new System.Drawing.Size(147, 48);
+            this.TableGenBtn.TabIndex = 105;
+            this.TableGenBtn.Text = "Генератор таблиц";
+            this.TableGenBtn.UseVisualStyleBackColor = true;
+            this.TableGenBtn.Click += new System.EventHandler(this.TableGenBtn_Click);
             // 
-            // button10
+            // Form7Btn
             // 
-            this.button10.Location = new System.Drawing.Point(190, 591);
-            this.button10.Margin = new System.Windows.Forms.Padding(4);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(147, 48);
-            this.button10.TabIndex = 105;
-            this.button10.Text = "Генератор таблиц";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button11.Location = new System.Drawing.Point(74, 522);
-            this.button11.Margin = new System.Windows.Forms.Padding(4);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(353, 48);
-            this.button11.TabIndex = 104;
-            this.button11.Text = "7. Отмены";
-            this.button11.UseVisualStyleBackColor = false;
+            this.Form7Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.Form7Btn.Location = new System.Drawing.Point(74, 522);
+            this.Form7Btn.Margin = new System.Windows.Forms.Padding(4);
+            this.Form7Btn.Name = "Form7Btn";
+            this.Form7Btn.Size = new System.Drawing.Size(353, 48);
+            this.Form7Btn.TabIndex = 104;
+            this.Form7Btn.Text = "7. Отмены";
+            this.Form7Btn.UseVisualStyleBackColor = false;
+            this.Form7Btn.Click += new System.EventHandler(this.Form7Btn_Click);
             // 
             // Judgment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 742);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(507, 668);
+            this.Controls.Add(this.TableGenBtn);
+            this.Controls.Add(this.Form7Btn);
+            this.Controls.Add(this.Form6Btn);
+            this.Controls.Add(this.Form3Btn);
+            this.Controls.Add(this.Form4Btn);
+            this.Controls.Add(this.Form5Btn);
+            this.Controls.Add(this.Form2Btn);
+            this.Controls.Add(this.LoadDataBtn);
+            this.Controls.Add(this.Form1Btn);
             this.Controls.Add(this.editJudgesBtn);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -186,15 +183,14 @@
         #endregion
 
         private System.Windows.Forms.Button editJudgesBtn;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button Form1Btn;
+        private System.Windows.Forms.Button LoadDataBtn;
+        private System.Windows.Forms.Button Form2Btn;
+        private System.Windows.Forms.Button Form6Btn;
+        private System.Windows.Forms.Button Form3Btn;
+        private System.Windows.Forms.Button Form4Btn;
+        private System.Windows.Forms.Button Form5Btn;
+        private System.Windows.Forms.Button TableGenBtn;
+        private System.Windows.Forms.Button Form7Btn;
     }
 }

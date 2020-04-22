@@ -50,7 +50,6 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -84,6 +83,7 @@
             this.label22 = new System.Windows.Forms.Label();
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox16
@@ -282,16 +282,6 @@
             this.button1.TabIndex = 413;
             this.button1.Text = "Сохранить";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button21
-            // 
-            this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button21.Location = new System.Drawing.Point(947, 810);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(98, 35);
-            this.button21.TabIndex = 412;
-            this.button21.Text = "На главную";
-            this.button21.UseVisualStyleBackColor = true;
             // 
             // textBox11
             // 
@@ -578,11 +568,23 @@
             this.label28.TabIndex = 444;
             this.label28.Text = "иные обособленные споры и рассмотрение иных процедурных вопросов";
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Aqua;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(1070, 56);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(98, 35);
+            this.button2.TabIndex = 446;
+            this.button2.Text = "Показать";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 861);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox21);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.label22);
@@ -616,7 +618,6 @@
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button21);
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.textBox10);
@@ -673,7 +674,6 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button21;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox textBox10;
@@ -707,5 +707,6 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Button button2;
     }
 }

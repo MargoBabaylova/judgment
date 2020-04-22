@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace judgment
 {
-    public partial class addJudge : Form
+    public partial class AddJudge : Form
     {
-        public addJudge()
+        public AddJudge()
         {
             InitializeComponent();
         }

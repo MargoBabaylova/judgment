@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -61,9 +61,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.selectJudge = new System.Windows.Forms.ComboBox();
+            this.selectStructure = new System.Windows.Forms.ComboBox();
+            this.selectCollegium = new System.Windows.Forms.ComboBox();
             this.textBox20 = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -74,6 +74,19 @@
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
+            this.judgmentDataSet = new judgment.judgmentDataSet();
+            this.judgmentDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.коллегииBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.коллегииTableAdapter = new judgment.judgmentDataSetTableAdapters.КоллегииTableAdapter();
+            this.составыBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.составыTableAdapter = new judgment.judgmentDataSetTableAdapters.СоставыTableAdapter();
+            this.судьиBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.судьиTableAdapter = new judgment.judgmentDataSetTableAdapters.СудьиTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.judgmentDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.judgmentDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.коллегииBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.составыBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.судьиBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -86,16 +99,6 @@
             this.button1.TabIndex = 366;
             this.button1.Text = "Сохранить";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button21
-            // 
-            this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button21.Location = new System.Drawing.Point(905, 705);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(98, 35);
-            this.button21.TabIndex = 365;
-            this.button21.Text = "На главную";
-            this.button21.UseVisualStyleBackColor = true;
             // 
             // textBox11
             // 
@@ -372,29 +375,35 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(165, 24);
             this.dateTimePicker1.TabIndex = 371;
             // 
-            // comboBox3
+            // selectJudge
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(936, 15);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(204, 26);
-            this.comboBox3.TabIndex = 370;
+            this.selectJudge.DataSource = this.судьиBindingSource;
+            this.selectJudge.DisplayMember = "fullName";
+            this.selectJudge.FormattingEnabled = true;
+            this.selectJudge.Location = new System.Drawing.Point(936, 15);
+            this.selectJudge.Name = "selectJudge";
+            this.selectJudge.Size = new System.Drawing.Size(204, 26);
+            this.selectJudge.TabIndex = 370;
             // 
-            // comboBox2
+            // selectStructure
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(564, 15);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(204, 26);
-            this.comboBox2.TabIndex = 369;
+            this.selectStructure.DataSource = this.составыBindingSource;
+            this.selectStructure.DisplayMember = "Название";
+            this.selectStructure.FormattingEnabled = true;
+            this.selectStructure.Location = new System.Drawing.Point(564, 15);
+            this.selectStructure.Name = "selectStructure";
+            this.selectStructure.Size = new System.Drawing.Size(204, 26);
+            this.selectStructure.TabIndex = 369;
             // 
-            // comboBox1
+            // selectCollegium
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(190, 15);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(204, 26);
-            this.comboBox1.TabIndex = 368;
+            this.selectCollegium.DataSource = this.коллегииBindingSource;
+            this.selectCollegium.DisplayMember = "Название";
+            this.selectCollegium.FormattingEnabled = true;
+            this.selectCollegium.Location = new System.Drawing.Point(190, 15);
+            this.selectCollegium.Name = "selectCollegium";
+            this.selectCollegium.Size = new System.Drawing.Size(204, 26);
+            this.selectCollegium.TabIndex = 368;
             // 
             // textBox20
             // 
@@ -483,6 +492,43 @@
             this.textBox16.Size = new System.Drawing.Size(45, 24);
             this.textBox16.TabIndex = 388;
             // 
+            // judgmentDataSet
+            // 
+            this.judgmentDataSet.DataSetName = "judgmentDataSet";
+            this.judgmentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // judgmentDataSetBindingSource
+            // 
+            this.judgmentDataSetBindingSource.DataSource = this.judgmentDataSet;
+            this.judgmentDataSetBindingSource.Position = 0;
+            // 
+            // коллегииBindingSource
+            // 
+            this.коллегииBindingSource.DataMember = "Коллегии";
+            this.коллегииBindingSource.DataSource = this.judgmentDataSetBindingSource;
+            // 
+            // коллегииTableAdapter
+            // 
+            this.коллегииTableAdapter.ClearBeforeFill = true;
+            // 
+            // составыBindingSource
+            // 
+            this.составыBindingSource.DataMember = "Составы";
+            this.составыBindingSource.DataSource = this.judgmentDataSetBindingSource;
+            // 
+            // составыTableAdapter
+            // 
+            this.составыTableAdapter.ClearBeforeFill = true;
+            // 
+            // судьиBindingSource
+            // 
+            this.судьиBindingSource.DataMember = "Судьи";
+            this.судьиBindingSource.DataSource = this.judgmentDataSetBindingSource;
+            // 
+            // судьиTableAdapter
+            // 
+            this.судьиTableAdapter.ClearBeforeFill = true;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -506,11 +552,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.selectJudge);
+            this.Controls.Add(this.selectStructure);
+            this.Controls.Add(this.selectCollegium);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button21);
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.textBox10);
@@ -538,6 +583,12 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form3";
             this.Text = "Нагрузка Рассмотрено заявлений";
+            this.Load += new System.EventHandler(this.Form3_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.judgmentDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.judgmentDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.коллегииBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.составыBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.судьиBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -546,7 +597,6 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button21;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox textBox10;
@@ -578,9 +628,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox selectJudge;
+        private System.Windows.Forms.ComboBox selectStructure;
+        private System.Windows.Forms.ComboBox selectCollegium;
         private System.Windows.Forms.TextBox textBox20;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label26;
@@ -591,5 +641,13 @@
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.BindingSource judgmentDataSetBindingSource;
+        private judgmentDataSet judgmentDataSet;
+        private System.Windows.Forms.BindingSource коллегииBindingSource;
+        private judgmentDataSetTableAdapters.КоллегииTableAdapter коллегииTableAdapter;
+        private System.Windows.Forms.BindingSource составыBindingSource;
+        private judgmentDataSetTableAdapters.СоставыTableAdapter составыTableAdapter;
+        private System.Windows.Forms.BindingSource судьиBindingSource;
+        private judgmentDataSetTableAdapters.СудьиTableAdapter судьиTableAdapter;
     }
 }
