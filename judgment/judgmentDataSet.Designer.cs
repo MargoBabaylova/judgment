@@ -5841,7 +5841,7 @@ namespace judgment.judgmentDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[2];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[4];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        id, Фамилия & \' \' & Имя & \' \' & Отчество AS fullName\r\nFROM         " +
@@ -5849,8 +5849,23 @@ namespace judgment.judgmentDataSetTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        id, Фамилия, Имя, Отчество\r\nFROM            Судьи";
+            this._commandCollection[1].CommandText = "SELECT        id, Имя, Фамилия, Отчество\r\nFROM            Судьи\r\nWHERE        id " +
+                "= @judgeId";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("judgeId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), null, global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT        id, Фамилия, Имя, Отчество\r\nFROM            Судьи";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "UPDATE Судьи\r\nSET  Фамилия = @judgeSurname, Имя = @judgeName, Отчество = @judgeMi" +
+                "ddlename\r\nWHERE id = @judgeId";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("judgeId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("judgeName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), null, global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("judgeSurname", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), null, global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("judgeMiddlename", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), null, global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5881,8 +5896,20 @@ namespace judgment.judgmentDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual judgmentDataSet.СудьиDataTable GetDataByParts() {
+        public virtual judgmentDataSet.СудьиDataTable GetDataByJudgeId(int judgeId) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(judgeId));
+            judgmentDataSet.СудьиDataTable dataTable = new judgmentDataSet.СудьиDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual judgmentDataSet.СудьиDataTable GetDataByParts() {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             judgmentDataSet.СудьиDataTable dataTable = new judgmentDataSet.СудьиDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -5959,6 +5986,48 @@ namespace judgment.judgmentDataSetTableAdapters {
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int UpdateJudge(int judgeId, string judgeName, string judgeSurname, string judgeMiddlename) {
+            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[3];
+            command.Parameters[0].Value = ((int)(judgeId));
+            if ((judgeName == null)) {
+                throw new global::System.ArgumentNullException("judgeName");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(judgeName));
+            }
+            if ((judgeSurname == null)) {
+                throw new global::System.ArgumentNullException("judgeSurname");
+            }
+            else {
+                command.Parameters[2].Value = ((string)(judgeSurname));
+            }
+            if ((judgeMiddlename == null)) {
+                throw new global::System.ArgumentNullException("judgeMiddlename");
+            }
+            else {
+                command.Parameters[3].Value = ((string)(judgeMiddlename));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     
@@ -6520,9 +6589,11 @@ namespace judgment.judgmentDataSetTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT        Составы.Название as Название_состава, [Хроника_судей].[Дата_поступления], [Хроника_судей].[Дата_ухода]
-FROM            (Составы INNER JOIN
-                         [Хроника_судей] ON Составы.id = [Хроника_судей].[id_состава])
+            this._commandCollection[1].CommandText = @"SELECT        Составы.Название AS Название_состава, [Хроника_судей].[Дата_поступления], [Хроника_судей].[Дата_ухода], [Хроника_судей].[id_состава], [Хроника_судей].[id_судьи], Судьи.Имя, Судьи.Фамилия, 
+                         Судьи.Отчество
+FROM            ((Составы INNER JOIN
+                         [Хроника_судей] ON Составы.id = [Хроника_судей].[id_состава]) INNER JOIN
+                         Судьи ON [Хроника_судей].[id_судьи] = Судьи.id)
 WHERE        [Хроника_судей].[id_судьи] = @judgeId";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("judgeId", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), null, global::System.Data.DataRowVersion.Current, false, null));

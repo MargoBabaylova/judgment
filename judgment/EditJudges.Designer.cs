@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditJudges));
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,6 +52,9 @@
             this.judgesTableAdapter = new judgment.judgmentDataSetTableAdapters.СудьиTableAdapter();
             this.составыTableAdapter = new judgment.judgmentDataSetTableAdapters.СоставыTableAdapter();
             this.хроника_судейTableAdapter = new judgment.judgmentDataSetTableAdapters.Хроника_судейTableAdapter();
+            this.судьиTableAdapter = new judgment.judgmentDataSetTableAdapters.СудьиTableAdapter();
+            this.successLabel = new System.Windows.Forms.Label();
+            this.errorLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.составыBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.judgmentDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.judgesBindingSource)).BeginInit();
@@ -151,6 +155,7 @@
             this.selectStructure.Name = "selectStructure";
             this.selectStructure.Size = new System.Drawing.Size(298, 26);
             this.selectStructure.TabIndex = 70;
+            this.selectStructure.ValueMember = "id";
             // 
             // составыBindingSource
             // 
@@ -242,11 +247,39 @@
             // 
             this.хроника_судейTableAdapter.ClearBeforeFill = true;
             // 
+            // судьиTableAdapter
+            // 
+            this.судьиTableAdapter.ClearBeforeFill = true;
+            // 
+            // successLabel
+            // 
+            this.successLabel.AutoSize = true;
+            this.successLabel.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.successLabel.Location = new System.Drawing.Point(248, 469);
+            this.successLabel.Name = "successLabel";
+            this.successLabel.Size = new System.Drawing.Size(146, 18);
+            this.successLabel.TabIndex = 95;
+            this.successLabel.Text = "Данные обновлены";
+            this.successLabel.Visible = false;
+            // 
+            // errorLabel
+            // 
+            this.errorLabel.AutoSize = true;
+            this.errorLabel.ForeColor = System.Drawing.Color.OrangeRed;
+            this.errorLabel.Location = new System.Drawing.Point(248, 469);
+            this.errorLabel.Name = "errorLabel";
+            this.errorLabel.Size = new System.Drawing.Size(357, 18);
+            this.errorLabel.TabIndex = 96;
+            this.errorLabel.Text = "В процессе обновления данных возникли ошибки";
+            this.errorLabel.Visible = false;
+            // 
             // EditJudges
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(975, 555);
+            this.Controls.Add(this.errorLabel);
+            this.Controls.Add(this.successLabel);
             this.Controls.Add(this.addJudgeBtn);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.currentHronicLabel);
@@ -264,6 +297,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EditJudges";
             this.Text = "Редактор судей";
@@ -299,5 +333,8 @@
         private System.Windows.Forms.BindingSource составыBindingSource;
         private judgmentDataSetTableAdapters.СоставыTableAdapter составыTableAdapter;
         private judgmentDataSetTableAdapters.Хроника_судейTableAdapter хроника_судейTableAdapter;
+        private judgmentDataSetTableAdapters.СудьиTableAdapter судьиTableAdapter;
+        private System.Windows.Forms.Label successLabel;
+        private System.Windows.Forms.Label errorLabel;
     }
 }

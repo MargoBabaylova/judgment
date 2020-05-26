@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TableGenerator));
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -62,7 +63,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(342, 48);
             this.button2.TabIndex = 96;
-            this.button2.Text = "Нагрузка судей (табл. №1)";
+            this.button2.Text = "Таблица №1 Нагрузка судей";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -72,7 +73,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(342, 48);
             this.button1.TabIndex = 97;
-            this.button1.Text = "Нагрузка судей АК (табл. №1)";
+            this.button1.Text = "Таблица №2 Нагрузка судей АК";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -82,7 +83,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(342, 48);
             this.button3.TabIndex = 98;
-            this.button3.Text = "Нагрузка судей ГК (табл. №1";
+            this.button3.Text = "Таблица №3 Нагрузка судей ГК";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -92,7 +93,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(342, 48);
             this.button4.TabIndex = 99;
-            this.button4.Text = "Нагрузка судей с заявлениями (табл. №1.1)";
+            this.button4.Text = "Таблица №4 Нагрузка судей\r\nс заявлениями";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button5
@@ -102,7 +103,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(342, 48);
             this.button5.TabIndex = 100;
-            this.button5.Text = "Нагрузка судей с заявлениями АК (табл. №1.1)";
+            this.button5.Text = "Таблица №5 Нагрузка судей\r\nс заявлениями АК";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button6
@@ -112,7 +113,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(342, 48);
             this.button6.TabIndex = 101;
-            this.button6.Text = "Нагрузка судей с заявлениями банкротство (табл. №1.1)";
+            this.button6.Text = "Таблица №6 Нагрузка судей\r\nс заявлениями банкротство";
             this.button6.UseVisualStyleBackColor = true;
             // 
             // button7
@@ -122,7 +123,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(342, 48);
             this.button7.TabIndex = 102;
-            this.button7.Text = "Нагрузка судей с заявлениями ГК\r\n(табл. №1.1)";
+            this.button7.Text = "Таблица №7 Нагрузка судей\r\nс заявлениями ГК";
             this.button7.UseVisualStyleBackColor = true;
             // 
             // button8
@@ -132,7 +133,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(342, 48);
             this.button8.TabIndex = 103;
-            this.button8.Text = "Нарушения сроков (табл. №2)";
+            this.button8.Text = "Таблица №8 Нарушения сроков";
             this.button8.UseVisualStyleBackColor = true;
             // 
             // button9
@@ -142,7 +143,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(342, 48);
             this.button9.TabIndex = 104;
-            this.button9.Text = "Нарушения сроков АК (табл. №2";
+            this.button9.Text = "Таблица №9 Нарушения сроков АК";
             this.button9.UseVisualStyleBackColor = true;
             // 
             // button10
@@ -152,7 +153,7 @@
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(342, 48);
             this.button10.TabIndex = 105;
-            this.button10.Text = "Нарушения сроков ГК (табл. №2)";
+            this.button10.Text = "Таблица №10 Нарушения сроков ГК";
             this.button10.UseVisualStyleBackColor = true;
             // 
             // button11
@@ -162,7 +163,7 @@
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(342, 48);
             this.button11.TabIndex = 106;
-            this.button11.Text = "Суд с процентами";
+            this.button11.Text = "Таблица №11 Суд с процентами";
             this.button11.UseVisualStyleBackColor = true;
             // 
             // button12
@@ -172,7 +173,7 @@
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(342, 48);
             this.button12.TabIndex = 112;
-            this.button12.Text = "Статистические показатели для представления";
+            this.button12.Text = "Таблица №17 Статистические показатели для представления";
             this.button12.UseVisualStyleBackColor = true;
             // 
             // button13
@@ -182,7 +183,7 @@
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(342, 48);
             this.button13.TabIndex = 111;
-            this.button13.Text = "Статистика по судьям";
+            this.button13.Text = "Таблица №16 Статистика по судьям";
             this.button13.UseVisualStyleBackColor = true;
             // 
             // button14
@@ -192,7 +193,7 @@
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(342, 48);
             this.button14.TabIndex = 110;
-            this.button14.Text = "Сравнительные показатели с тенденциями";
+            this.button14.Text = "Таблица №15 Сравнительные показатели с тенденциями";
             this.button14.UseVisualStyleBackColor = true;
             // 
             // button15
@@ -202,7 +203,7 @@
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(342, 48);
             this.button15.TabIndex = 109;
-            this.button15.Text = "Отмены ГК (табл. №3)";
+            this.button15.Text = "Таблица №14 Отмены ГК";
             this.button15.UseVisualStyleBackColor = true;
             // 
             // button16
@@ -212,7 +213,7 @@
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(342, 48);
             this.button16.TabIndex = 108;
-            this.button16.Text = "Отмены АК (табл. №3)";
+            this.button16.Text = "Таблица №13 Отмены АК";
             this.button16.UseVisualStyleBackColor = true;
             // 
             // button17
@@ -222,7 +223,7 @@
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(342, 48);
             this.button17.TabIndex = 107;
-            this.button17.Text = "Отмены (табл. №3)";
+            this.button17.Text = "Таблица №12 Отмены";
             this.button17.UseVisualStyleBackColor = true;
             // 
             // button18
@@ -335,6 +336,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TableGenerator";
             this.Text = "Генератор таблиц";

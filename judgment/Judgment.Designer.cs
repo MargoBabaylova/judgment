@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Judgment));
             this.editJudgesBtn = new System.Windows.Forms.Button();
             this.Form1Btn = new System.Windows.Forms.Button();
             this.LoadDataBtn = new System.Windows.Forms.Button();
@@ -118,7 +119,7 @@
             this.Form4Btn.Name = "Form4Btn";
             this.Form4Btn.Size = new System.Drawing.Size(353, 48);
             this.Form4Btn.TabIndex = 99;
-            this.Form4Btn.Text = "4. Нагрузка Рассмотрено заявлений банкротство";
+            this.Form4Btn.Text = "4. Нагрузка Рассмотрено заявлений\r\nо банкротстве";
             this.Form4Btn.UseVisualStyleBackColor = false;
             this.Form4Btn.Click += new System.EventHandler(this.Form4Btn_Click);
             // 
@@ -173,6 +174,7 @@
             this.Controls.Add(this.Form1Btn);
             this.Controls.Add(this.editJudgesBtn);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Judgment";
             this.Text = "Judgment";
